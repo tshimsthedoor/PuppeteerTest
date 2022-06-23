@@ -17,15 +17,15 @@ describe('Admin Page', () => {
         page = await browser.newPage();
         page.setDefaultTimeout(config.timeout);
         pageModel = new AdminPageModel(page, config);
-    });
+    })
 
-    // afterEach(async () => {
-    //     await page.close();
-    // });
+    afterEach(async () => {
+        await page.close();
+    })
 
     after(async () => {
         await browser.close();
-    });
+    })
 
     it('Should redirect to the login page', async () => {
         const response = await pageModel.go();
