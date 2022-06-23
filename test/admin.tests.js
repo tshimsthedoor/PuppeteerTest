@@ -19,9 +19,9 @@ describe('Admin Page', () => {
         pageModel = new AdminPageModel(page, config);
     });
 
-    afterEach(async () => {
-        await page.close();
-    });
+    // afterEach(async () => {
+    //     await page.close();
+    // });
 
     after(async () => {
         await browser.close();
